@@ -1,6 +1,7 @@
 @import url('../css/base/button.css');
 @import url('../css/base/text-box.css');
 @import url('../css/layout/popup.css');
+@import url('../css/base/combobox.css');
 body {
     font-family: MISAGoogleSan;
     font-size: 13px;

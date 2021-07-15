@@ -18,7 +18,6 @@
     background-color: #fff;
     border-radius: 4px;
     visibility: hidden;
-    overflow-y: scroll;
     opacity: 1;
 }
 
@@ -76,14 +75,15 @@
 }
 
 .info {
-    height: 100%;
+    height: 474px;
+    overflow-y: scroll;
     width: 75%;
     margin-right: 24px;
 }
 
 .info .A {
     width: 100%;
-    height: 60%;
+    height: 420px;
 }
 
 .info .B {
@@ -145,19 +145,24 @@
 .foot {
     width: 100%;
     height: 60px;
-    background-color: #cccccccc;
+    background-color: #eeeeee;
     margin-top: 24px;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     text-align: center;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
 .foot .button.save {
     height: 36px;
-    width: 100px;
+    align-items: center;
+    white-space: nowrap;
+    box-sizing: border-box;
     border-radius: 4px;
-    padding: 0;
+    padding-left: 40px;
+    padding-right: 16px;
     color: #fff;
     text-align: center;
     background-color: #019160;
@@ -167,7 +172,7 @@
     background-repeat: no-repeat;
     background-position-x: 16px;
     background-position-y: center;
-    margin: 0 24px 0 16px;
+    margin: 0 24px 0 0;
     border: 0px;
 }
 
@@ -177,16 +182,20 @@
 
 .foot .button.cancel {
     height: 36px;
-    width: 100px;
+    box-sizing: border-box;
     border: 0;
-    padding: 0;
+    padding: 0 16px 0 16px;
     color: #000000;
     text-align: center;
-    background-color: #cccccccc;
+    background-color: #eeeeee;
     line-height: 36px;
-    margin: 0 16px 0 24px;
+    margin: 0 16px 0 16px;
 }
 
 .foot .button.cancel:hover {
     background-color: red;
+}
+
+.cl-red {
+    color: red;
 }

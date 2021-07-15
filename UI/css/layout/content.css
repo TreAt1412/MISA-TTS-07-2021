@@ -29,7 +29,8 @@
     float: right;
     right: 16px;
     height: 40px;
-    width: 164px;
+    box-sizing: border-box;
+    padding-right: 16px;
     background-image: url("../../content/icon/add.png");
     background-repeat: no-repeat;
     background-size: 16px;
@@ -220,6 +221,10 @@
     height: 40px;
 }
 
+.content .table-content .main-table tr:hover {
+    background-color: #f8f7f7 !important;
+}
+
 .content .table-content .main-table tr th {
     position: sticky;
     top: 0px;
@@ -242,7 +247,7 @@
 }
 
 .content .table-content .main-table .employee-dob {
-    text-align: left;
+    text-align: center;
     padding-left: 10px;
 }
 
@@ -291,6 +296,7 @@
 
 .content .table-content .main-table tbody tr td {
     word-wrap: break-word;
+    white-space: nowrap;
 }
 
 .content .table-content .main-table tbody tr:nth-child(even) {
@@ -368,11 +374,20 @@
     cursor: pointer;
 }
 
-.content .content-footer .footer-middle .first-page {
-    background-image: url("../../content/icon/1.PNG");
-    background-size: contain;
-    background-repeat: no-repeat;
+.content .content-footer .footer-middle .page-number:hover {
+    background-color: #fff;
     border: none;
+}
+
+.content .content-footer .footer-middle .page-number:active {
+    background-color: #019160
+}
+
+.content .content-footer .footer-middle .page-number {
+    border: 1px solid #cccccc;
+}
+
+.content .content-footer .footer-middle .first-page {
     border-radius: 50%;
     width: 32px;
     height: 32px;
@@ -381,10 +396,6 @@
 }
 
 .content .content-footer .footer-middle .second-page {
-    background-image: url("../../content/icon/2.PNG");
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: none;
     border-radius: 50%;
     width: 32px;
     height: 32px;
@@ -393,10 +404,6 @@
 }
 
 .content .content-footer .footer-middle .third-page {
-    background-image: url("../../content/icon/3.PNG");
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: none;
     border-radius: 50%;
     width: 32px;
     height: 32px;
@@ -405,10 +412,6 @@
 }
 
 .content .content-footer .footer-middle .forth-page {
-    background-image: url("../../content/icon/4.PNG");
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: none;
     border-radius: 50%;
     width: 32px;
     height: 32px;
