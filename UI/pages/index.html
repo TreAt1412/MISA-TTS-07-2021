@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phần mềm quản lý nhà hàng - CUKCUK.VN</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/layout/header.css">
+    <link rel="stylesheet" href="../css/layout/content.css">
+    <link rel="stylesheet" href="../css/layout/menu.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-left">
+            <div class="toggle"></div>
+            <div class="logo"></div>
+
+        </div>
+        <div class="header-right">
+            <div class="header-title"><b>Nhà hàng Biển Đông</b></div>
+            <div class="header-arrow"></div>
+
+            <div class="header-right-content">
+                <div class="customer-dash"></div>
+
+                <div class="customer-name">Đỗ Việt Anh</div>
+                <div class="customer-logo"></div>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="menu-item menu-item-active">
+            <div class="menu-icon "></div>
+            <div class="menu-text">Tổng quan</div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-icon menu-icon-report"></div>
+            <div class="menu-text">Báo cáo</div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-icon"></div>
+            <div class="menu-text">Mua hàng</div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-icon menu-icon-employee"></div>
+            <div class="menu-text">Danh mục nhân viên</div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-icon menu-icon-employee"></div>
+            <div class="menu-text">Danh mục nhân viên</div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-icon menu-icon-setting"></div>
+            <div class="menu-text">Thiết lập hệ thống</div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-title">
+            <div class="title-content"><b>Danh sách nhân viên</b></div>
+
+            <button class="add-employee-btn">
+                    Thêm nhân viên
+            </button>
+
+        </div>
+        <div class="content-tool">
+
+            <input class="content-search" type="text" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại">
+
+            <div class="department-filter">
+                <div class="department-name">
+                    Tất cả phòng ban
+                </div>
+                <div class="department-filter-icon"></div>
+            </div>
+            <div class="position-filter">
+                <div class="position-name">Tất cả vị trí</div>
+                <div class="position-filter-icon"></div>
+            </div>
+            <div class="refresh">
+                <button class="refresh-btn"></button>
+            </div>
+        </div>
+        <div class="table-content">
+            <table class="main-table">
+                <tr>
+                    <th class="employee-id"><b>Mã nhân viên</b></th>
+                    <th class="employee-name"><b>Họ và tên</b></th>
+                    <th class="employee-gender"><b>Giới tính</b></th>
+                    <th class="employee-dob"><b>Ngày sinh</b></th>
+                    <th class="employee-phone"><b>Điện thoại</b></th>
+                    <th class="employee-email"><b>Email</b></th>
+                    <th class="employee-role"><b>Chức vụ</b></th>
+                    <th class="employee-department"><b>Phòng ban</b></th>
+                    <th class="employee-wage"><b>Mức lương cơ bản</b></th>
+                    <th class="employee-status"><b>Tình trạng công việc</b></th>
+                </tr>
+                <tr>
+                    <td class="employee-id">NV-513231</td>
+                    <td class="employee-name">Hồ Văn Long</td>
+                    <td class="employee-gender">Khác </td>
+                    <td class="employee-dob">11/08/1978</td>
+                    <td class="employee-phone">0903322141</td>
+                    <td class="employee-email">cuon@gmail.com</td>
+                    <td class="employee-role">Giám đốc</td>
+                    <td class="employee-department">Phòng nhân sự</td>
+                    <td class="employee-wage">19.233.233</td>
+                    <td class="employee-status">Đang thử việc</td>
+                </tr>
+                <tr>
+                    <td class="employee-id">NV-513231</td>
+                    <td class="employee-name">Hồ Văn Long</td>
+                    <td class="employee-gender"></td>
+                    <td class="employee-dob">11/08/1978</td>
+                    <td class="employee-phone">0903322141</td>
+                    <td class="employee-email">cuon@gmail.com</td>
+                    <td class="employee-role">Giám đốc</td>
+                    <td class="employee-department">Phòng nhân sự</td>
+                    <td class="employee-wage">19.233.233</td>
+                    <td class="employee-status">Đang thử việc</td>
+                </tr>
+                <tr>
+                    <td class="employee-id">NV-513231</td>
+                    <td class="employee-name">Hồ Văn Long</td>
+                    <td class="employee-gender">Khác </td>
+                    <td class="employee-dob">11/08/1978</td>
+                    <td class="employee-phone">0903322141</td>
+                    <td class="employee-email">cuon@gmail.com</td>
+                    <td class="employee-role">Giám đốc</td>
+                    <td class="employee-department">Phòng nhân sự</td>
+                    <td class="employee-wage">19.233.233</td>
+                    <td class="employee-status">Đang thử việc</td>
+                </tr>
+                <tr>
+                    <td class="employee-id">NV-513231</td>
+                    <td class="employee-name">Hồ Văn Long</td>
+                    <td class="employee-gender">Khác </td>
+                    <td class="employee-dob">11/08/1978</td>
+                    <td class="employee-phone">0903322141</td>
+                    <td class="employee-email">cuon@gmail.com</td>
+                    <td class="employee-role">Giám đốc</td>
+                    <td class="employee-department">Phòng nhân sự</td>
+                    <td class="employee-wage">19.233.233</td>
+                    <td class="employee-status">Đang thử việc</td>
+                </tr>
+                <tr>
+                    <td class="employee-id">NV-513231</td>
+                    <td class="employee-name">Hồ Văn Long</td>
+                    <td class="employee-gender">Khác </td>
+                    <td class="employee-dob">11/08/1978</td>
+                    <td class="employee-phone">0903322141</td>
+                    <td class="employee-email">cuon@gmail.com</td>
+                    <td class="employee-role">Giám đốc</td>
+                    <td class="employee-department">Phòng nhân sự</td>
+                    <td class="employee-wage">19.233.233</td>
+                    <td class="employee-status">Đang thử việc</td>
+                </tr>
+                <tr>
+                    <td class="employee-id">NV-513231</td>
+                    <td class="employee-name">Hồ Văn Long</td>
+                    <td class="employee-gender">Khác </td>
+                    <td class="employee-dob">11/08/1978</td>
+                    <td class="employee-phone">0903322141</td>
+                    <td class="employee-email">cuon@gmail.com</td>
+                    <td class="employee-role">Giám đốc</td>
+                    <td class="employee-department">Phòng nhân sự</td>
+                    <td class="employee-wage">19.233.233</td>
+                    <td class="employee-status">Đang thử việc</td>
+                </tr>
+                <tr>
+                    <td class="employee-id">NV-513231</td>
+                    <td class="employee-name">Hồ Văn Long</td>
+                    <td class="employee-gender">Khác </td>
+                    <td class="employee-dob">11/08/1978</td>
+                    <td class="employee-phone">0903322141</td>
+                    <td class="employee-email">cuon@gmail.com</td>
+                    <td class="employee-role">Giám đốc</td>
+                    <td class="employee-department">Phòng nhân sự</td>
+                    <td class="employee-wage">19.233.233</td>
+                    <td class="employee-status">Đang thử việc</td>
+                </tr>
+                <tr>
+                    <td class="employee-id">NV-513231</td>
+                    <td class="employee-name">Hồ Văn Long</td>
+                    <td class="employee-gender">Khác </td>
+                    <td class="employee-dob">11/08/1978</td>
+                    <td class="employee-phone">0903322141</td>
+                    <td class="employee-email">cuon@gmail.com</td>
+                    <td class="employee-role">Giám đốc</td>
+                    <td class="employee-department">Phòng nhân sự</td>
+                    <td class="employee-wage">19.233.233</td>
+                    <td class="employee-status">Đang thử việc</td>
+                </tr>
+                <tr>
+                    <td class="employee-id">NV-513231</td>
+                    <td class="employee-name">Hồ Văn Long</td>
+                    <td class="employee-gender">Khác </td>
+                    <td class="employee-dob">11/08/1978</td>
+                    <td class="employee-phone">0903322141</td>
+                    <td class="employee-email">cuon@gmail.com</td>
+                    <td class="employee-role">Giám đốc</td>
+                    <td class="employee-department">Phòng nhân sự</td>
+                    <td class="employee-wage">19.233.233</td>
+                    <td class="employee-status">Đang thử việc</td>
+                </tr>
+                <tr>
+                    <td class="employee-id">NV-513231</td>
+                    <td class="employee-name">Hồ Văn Long</td>
+                    <td class="employee-gender">Khác </td>
+                    <td class="employee-dob">11/08/1978</td>
+                    <td class="employee-phone">0903322141</td>
+                    <td class="employee-email">cuon@gmail.com</td>
+                    <td class="employee-role">Giám đốc</td>
+                    <td class="employee-department">Phòng nhân sự</td>
+                    <td class="employee-wage">19.233.233</td>
+                    <td class="employee-status">Đang thử việc</td>
+                </tr>
+                <tr>
+                    <td class="employee-id">NV-513231</td>
+                    <td class="employee-name">Hồ Văn Long</td>
+                    <td class="employee-gender">Khác </td>
+                    <td class="employee-dob">11/08/1978</td>
+                    <td class="employee-phone">0903322141</td>
+                    <td class="employee-email">cuon@gmail.com</td>
+                    <td class="employee-role">Giám đốc</td>
+                    <td class="employee-department">Phòng nhân sự</td>
+                    <td class="employee-wage">19.233.233</td>
+                    <td class="employee-status">Đang thử việc</td>
+                </tr>
+                <tr>
+                    <td class="employee-id">NV-513231</td>
+                    <td class="employee-name">Hồ Văn Long</td>
+                    <td class="employee-gender">Khác </td>
+                    <td class="employee-dob">11/08/1978</td>
+                    <td class="employee-phone">0903322141</td>
+                    <td class="employee-email">cuon@gmail.com</td>
+                    <td class="employee-role">Giám đốc</td>
+                    <td class="employee-department">Phòng nhân sự</td>
+                    <td class="employee-wage">19.233.233</td>
+                    <td class="employee-status">Đang thử việc</td>
+                </tr>
+                <tr>
+                    <td class="employee-id">NV-513231</td>
+                    <td class="employee-name">Hồ Văn Long</td>
+                    <td class="employee-gender">Khác </td>
+                    <td class="employee-dob">11/08/1978</td>
+                    <td class="employee-phone">0903322141</td>
+                    <td class="employee-email">cuon@gmail.com</td>
+                    <td class="employee-role">Giám đốc</td>
+                    <td class="employee-department">Phòng nhân sự</td>
+                    <td class="employee-wage">19.233.233</td>
+                    <td class="employee-status">Đang thử việc</td>
+                </tr>
+
+
+            </table>
+        </div>
+        <div class="content-footer">
+            <div class="footer-left">Hiển thị 1-10/1000 nhân viên</div>
+            <div class="footer-middle">
+                <button class="double-left"></button>
+                <button class="left"></button>
+                <button class="first-page"></button>
+                <button class="second-page"></button>
+                <button class="third-page"></button>
+                <button class="forth-page"></button>
+                <button class="right"></button>
+                <button class="double-right"></button>
+            </div>
+            <div class="footer-right">10 nhân viên/trang</div>
+        </div>
+    </div>
+    <div class="div-dialog">
+    </div>
+    <div class="popup">
+        <div class="head">
+            <div class="head-text">THÔNG TIN NHÂN VIÊN</div>
+            <div class="head-close"></div>
+        </div>
+        <div class="main">
+            <div class="avatar">
+                <div class="image"></div>
+                <div class="ta-center">(Vui lòng chọn ảnh có định dạng .jqg,.jepg,.png,.gì.)</div>
+            </div>
+            <div class="info">
+                <div class="A">
+                    <div>A. THÔNG TIN CHUNG:</div>
+                    <div class="line"></div>
+                    <div class="row mt-8">
+                        <div class="col">
+                            <label for="">Mã nhân viên<span class="cl-red">(*)</span></label><br>
+                            <input type="text" class="textbox-default" id="focus">
+
+                        </div>
+                        <div class="col">
+                            <label for="">Họ và tên<span class="cl-red">(*)</span></label><br>
+                            <input type="text" class="textbox-default" autofocus>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="">Ngày sinh</label><br>
+                            <input type="date" class="textbox-default">
+                        </div>
+                        <div class="col">
+                            <label for="">Giới tính</label><br>
+                            <input type="text" class="textbox-default textbox-arrow">
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="">Số CMTND/ Căn cước<span class="cl-red">(*)</span></label><br>
+                            <input type="text" class="textbox-default">
+                        </div>
+                        <div class="col">
+                            <label for="">Ngày cấp</label><br>
+                            <input type="date" class="textbox-default">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="">Nơi cấp</label><br>
+                            <input type="text" class="textbox-default">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="">Email<span class="cl-red">(*)</span></label><br>
+                            <input type="text" class="textbox-default">
+                        </div>
+                        <div class="col">
+                            <label for="">Số điện thoại<span class="cl-red">(*)</span></label><br>
+                            <input type="text" class="textbox-default">
+                        </div>
+                    </div>
+                </div>
+                <div class="B mt-16">
+                    <div>B.THÔNG TIN CÔNG VIỆC</div>
+                    <div class="line"></div>
+                    <div class="row mt-8">
+                        <div class="col">
+                            <label for="">Vị trí</label><br>
+                            <input type="text" class="textbox-default textbox-arrow">
+                        </div>
+                        <div class="col">
+                            <label for="">Phòng ban</label><br>
+                            <input type="text" class="textbox-default textbox-arrow">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="">Mã số thuế cá nhân</label><br>
+                            <input type="text" class="textbox-default">
+                        </div>
+                        <div class="col">
+                            <label for="">Mức lương cơ bản</label><br>
+                            <input type="text" class="textbox-default">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="">Ngày gia nhập công ty</label><br>
+                            <input type="date" class="textbox-default">
+                        </div>
+                        <div class="col">
+                            <label for="">Tình trạng công việc</label><br>
+                            <input type="text" class="textbox-default">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <button class="button save">Lưu</button>
+            <button class="button cancel">Hủy</button>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

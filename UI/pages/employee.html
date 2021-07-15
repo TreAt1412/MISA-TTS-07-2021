@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách nhân viên</title>
+    <!-- Phần thư viện -->
+
+    <!-- Phần dùng chung -->
+    <link rel="stylesheet" href="../css/common.css">
+    <!-- Phần riêng từng màn hình -->
+    <link rel="stylesheet" href="../css/employee.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Phần menu -->
+        <div class="menu">
+            <div class="home">
+                <div class="toggle"></div>
+                <div class="QLNV"></div>
+            </div>
+            <div class="item">
+                <div class="icon general">
+                    <span>Tổng quan</span>
+                </div>
+                <div class="icon report">
+                    <span>Báo cáo</span>
+                </div>
+                <div class="icon buy">
+                    <span>Mua hàng</span>
+                </div>
+                <div class="icon dic-employee">
+                    <span>Danh mục nhân viên</span>
+                </div>
+                <div class="icon dic-employee">
+                    <span>Danh mục nhân viên</span>
+                </div>
+                <div class="icon setting">
+                    <span>Thiết lập hệ thống</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phần nội dung -->
+        <div class="content">
+            <!-- phần slidebar -->
+            <div class="slidebar">
+                <div class="slidebar-select">
+                    <div class="text">Nhà hàng biển đông</div>
+                    <div class="Select"></div>
+                </div>
+                <div class="icon">
+                    <div class="avatar"></div>
+                    <div class="name">Đỗ Minh Ngọc</div>
+                    <div class="option"></div>
+                </div>
+            </div>
+            <!-- Phần thay thế nội dung từng trang -->
+            <div class="main-content ">
+                <div class="head-content">
+                    <div class="start">
+                        <div class="text">Danh sách nhân viên</div>
+                    </div>
+                    <div class="add">
+                        <div class="add-icon"></div>
+                        <div class="add-text">Thêm nhân viên</div>
+                    </div>
+                </div>
+                <div class="body-content">
+                    <div class="head">
+                        <div class="d-flex j-content">
+                            <div class="find">
+                                <div class="search"></div>
+                                <input type="text" name="" id="search" placeholder="Tìm kiếm theo mã,tên hoặc số điện thoại">
+                            </div>
+                            <div class="department">
+                                <div class="select">
+                                    <div class="inp">Tất cả phòng ban</div>
+                                    <div class="X"></div>
+                                    <div class="select-arrow"></div>
+                                </div>
+                            </div>
+                            <div class="position">
+                                <div class="select">
+                                    <div class="inp">Tất cả vị trí</div>
+                                    <div class="X"></div>
+                                    <div class="select-arrow"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="refresh">
+                            <div class="excel"></div>
+                            <div class="print"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    <!-- phần tạo bảng -->
+                    <div class="main">
+                        <div id="gridEmployee">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>hihi</th>
+                                        <th>hoho</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>sdf</td>
+                                        <td>adssfg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>dasfgd</td>
+                                        <td>sadfdsgf</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ádfsgfd</td>
+                                        <td>adssfd</td>
+                                    </tr>
+                                    <tr>
+                                        <td>adsf</td>
+                                        <td>ádsfdg</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="foot">Phân trang</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Phần thư viện -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Phần dùng chung -->
+    <script src="common.js"></script>
+    <script src="data.js"></script>
+    <!-- Phần riêng từng màn hình -->
+    <script src="employee.js"></script>
+</body>
+
+</html>

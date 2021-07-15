@@ -1,0 +1,417 @@
+.content {
+    position: absolute;
+    top: 49px;
+    left: 226px;
+    width: calc(100% - 226px);
+    height: calc(100% - 49px);
+}
+
+.content .content-title {
+    width: 100%;
+    height: 44px;
+    position: relative;
+    display: flex;
+    padding-top: 12px;
+    align-items: center;
+}
+
+.content .content-title .title-content {
+    font-size: 16px;
+    box-sizing: content-box;
+    position: absolute;
+    float: left;
+    width: 200px;
+    margin-left: 16px;
+}
+
+.content .content-title .add-employee-btn {
+    position: absolute;
+    float: right;
+    right: 16px;
+    height: 40px;
+    width: 164px;
+    background-image: url("../../content/icon/add.png");
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 16px 12px;
+    border-radius: 4px;
+    border: none;
+    background-color: #019160;
+    cursor: pointer;
+    color: #ffffff;
+    padding-left: 40px;
+    text-align: left
+}
+
+.content .content-title .add-employee-btn:hover {
+    background-color: #01B075;
+}
+
+.content .content-title .add-employee .add-employee-btn .add-employee-logo {
+    height: 16px;
+    width: 16px;
+    float: left;
+    left: 0px;
+    margin-left: 16px;
+    margin-right: 8px;
+    background-image: url("../../content/icon/add.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.content .content-tool {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+.content .content-tool .input-search {
+    position: relative;
+    width: 300px;
+    height: 38px;
+    border: 1px solid #cccc;
+    border-radius: 4px;
+    margin-left: 16px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.content .content-tool .content-search {
+    margin-left: 16px;
+    margin-right: 8px;
+    height: 36px;
+    width: 260px;
+    border-radius: 4px;
+    border: 1px solid #cccc;
+    padding-left: 40px;
+    background-image: url("../../content/icon/search.png");
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 16px 12px;
+    outline: none;
+}
+
+.content .content-tool .content-search:focus {
+    border-color: #019160 !important;
+}
+
+.content .content-tool .content-search:hover {
+    border: 1px solid #019160;
+}
+
+.content .content-tool .department-filter {
+    position: relative;
+    box-sizing: content;
+    height: 38px;
+    border: 1px solid #cccc;
+    border-radius: 4px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+.content .content-tool .department-filter .department-name {
+    margin-left: 16px;
+}
+
+.content .content-tool .department-filter .department-filter-icon {
+    position: absolute;
+    float: right;
+    right: 12px;
+    height: 12px;
+    width: 12px;
+    background-image: url("../../content/icon/arrow-down-sign-to-navigate.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.content .content-tool .position-filter {
+    position: relative;
+    box-sizing: content;
+    height: 38px;
+    border: 1px solid #cccc;
+    border-radius: 4px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+.content .content-tool .position-filter .position-name {
+    margin-left: 16px;
+}
+
+.content .content-tool .position-filter .position-filter-icon {
+    position: absolute;
+    float: right;
+    right: 12px;
+    height: 12px;
+    width: 12px;
+    background-image: url("../../content/icon/arrow-down-sign-to-navigate.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.content .content-tool .refresh {
+    position: absolute;
+    float: right;
+    right: 16px;
+    height: 38px;
+    width: 38px;
+    border-radius: 4px;
+}
+
+.content .content-tool .refresh button {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../content/icon/refresh.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 8px 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.content .table-content {
+    position: relative;
+    width: calc(100% - 32px);
+    height: calc(100% - 49px - 44px - 40px - 35px);
+    margin-left: 16px;
+    margin-right: 16px;
+    border-bottom: 5px solid #cccccc;
+    max-height: 100%;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: #cccccccc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.content .table-content .main-table {
+    border-collapse: collapse;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.content .table-content .main-table tr {
+    border-bottom: 2px solid #cccccc;
+    height: 40px;
+}
+
+.content .table-content .main-table tr th {
+    position: sticky;
+    top: 0px;
+    background-color: #ffffff;
+}
+
+.content .table-content .main-table .employee-id {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.content .table-content .main-table .employee-name {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.content .table-content .main-table .employee-gender {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.content .table-content .main-table .employee-dob {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.content .table-content .main-table .employee-phone {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.content .table-content .main-table .employee-email {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.content .table-content .main-table .employee-role {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.content .table-content .main-table .employee-department {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.content .table-content .main-table .employee-wage {
+    text-align: right;
+    padding-left: 10px;
+    padding-right: 8px;
+}
+
+.content .table-content .main-table .employee-status {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.content .table-content .main-table tbody {
+    position: relative;
+    width: 100%;
+    display: table;
+}
+
+.content .table-content .main-table tbody tr {
+    text-align: auto;
+    position: relative;
+    width: 100%;
+}
+
+.content .table-content .main-table tbody tr td {
+    word-wrap: break-word;
+}
+
+.content .table-content .main-table tbody tr:nth-child(even) {
+    background-color: #f8f7f7;
+}
+
+.content .content-footer {
+    position: relative;
+    width: calc(100% - 32px);
+    height: 56px;
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+
+.content .content-footer .footer-left {
+    width: 33.33%;
+    padding-left: 16px;
+}
+
+.content .content-footer .footer-middle {
+    width: 33.33%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.content .content-footer .footer-right {
+    width: 33.33%;
+    padding-right: 16px;
+    text-align: right;
+}
+
+.content .content-footer .footer-middle .double-left {
+    background-image: url("../../content/icon/arrow-double-left.PNG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.content .content-footer .footer-middle .left {
+    background-image: url("../../content/icon/arrow-left.PNG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.content .content-footer .footer-middle .right {
+    background-image: url("../../content/icon/arrow-right.PNG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.content .content-footer .footer-middle .double-right {
+    background-image: url("../../content/icon/arrow-double-right.PNG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.content .content-footer .footer-middle .first-page {
+    background-image: url("../../content/icon/1.PNG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.content .content-footer .footer-middle .second-page {
+    background-image: url("../../content/icon/2.PNG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.content .content-footer .footer-middle .third-page {
+    background-image: url("../../content/icon/3.PNG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.content .content-footer .footer-middle .forth-page {
+    background-image: url("../../content/icon/4.PNG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+    cursor: pointer;
+}

@@ -1,0 +1,56 @@
+.menu {
+    width: 225px;
+    height: calc(100vh - 49px);
+    border-right: 1px solid #cccc;
+}
+
+.menu .menu-item {
+    height: 44px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.menu .menu-item:hover {
+    background-color: #e5e5e5;
+    color: #000000;
+}
+
+.menu-item-active {
+    background-color: #019160 !important;
+    color: #ffffff;
+}
+
+.menu .menu-item .menu-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    margin-right: 10px;
+    background-image: url("../../content/icon/dashboard.png");
+    background-size: contain;
+}
+
+.menu-icon.menu-icon-dashboard {
+    background-image: url("../../content/icon/dashboard.png");
+    background-size: contain;
+}
+
+.menu-icon.menu-icon-employee {
+    background-image: url("../../content/icon/dic-employee.png") !important;
+    background-size: contain;
+}
+
+.menu-icon.menu-icon-setting {
+    background-image: url("../../content/icon/setting.png") !important;
+    background-size: contain;
+}
+
+.menu-icon.menu-icon-report {
+    background-image: url("../../content/icon/report.png") !important;
+    background-size: contain;
+}
