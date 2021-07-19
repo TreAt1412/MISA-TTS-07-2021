@@ -115,6 +115,11 @@
     display: flex;
     align-items: center;
     width: 200px;
+    cursor: pointer;
+}
+
+.content .content-tool .department-filter:hover {
+    border-color: #019160 !important;
 }
 
 .content .content-tool .department-filter .department-name {
@@ -142,6 +147,11 @@
     display: flex;
     align-items: center;
     width: 200px;
+    cursor: pointer;
+}
+
+.content .content-tool .position-filter:hover {
+    border-color: #019160 !important;
 }
 
 .content .content-tool .position-filter .position-name {
@@ -229,6 +239,10 @@
     position: sticky;
     top: 0px;
     background-color: #ffffff;
+}
+
+.content .table-content .main-table tr td {
+    cursor: pointer;
 }
 
 .content .table-content .main-table .employee-id {
@@ -331,20 +345,19 @@
 }
 
 .content .content-footer .footer-middle .double-left {
-    background-image: url("../../content/icon/arrow-double-left.PNG");
+    /* background-image: url("../../content/icon/arrow-double-left.PNG");
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     border: none;
     width: 20px;
     height: 20px;
     margin-left: 16px;
     cursor: pointer;
+    background-color: white;
 }
 
 .content .content-footer .footer-middle .left {
-    background-image: url("../../content/icon/arrow-left.PNG");
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-color: white;
     border: none;
     width: 20px;
     height: 20px;
@@ -353,9 +366,7 @@
 }
 
 .content .content-footer .footer-middle .right {
-    background-image: url("../../content/icon/arrow-right.PNG");
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-color: white;
     border: none;
     width: 20px;
     height: 20px;
@@ -364,9 +375,7 @@
 }
 
 .content .content-footer .footer-middle .double-right {
-    background-image: url("../../content/icon/arrow-double-right.PNG");
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-color: white;
     border: none;
     width: 20px;
     height: 20px;

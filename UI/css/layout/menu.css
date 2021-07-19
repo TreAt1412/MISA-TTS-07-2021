@@ -29,10 +29,9 @@
 .menu .menu-item .menu-icon {
     width: 20px;
     height: 20px;
-    background-color: #ffffff;
     margin-right: 10px;
-    background-image: url("../../content/icon/dashboard.png");
-    background-size: contain;
+    line-height: 20px;
+    text-align: center;
 }
 
 .menu-icon.menu-icon-dashboard {
