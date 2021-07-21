@@ -1,30 +1,29 @@
 .header {
     height: 48px;
-    border-bottom: 1px solid black;
     width: 100%;
     display: flex;
 }
 
 .header .header-left {
+    height: 48px;
+    width: 225px;
     align-items: center;
     display: flex;
-    width: 225px;
-    border-right: 1px solid #cccc;
-    height: 48px;
 }
 
 .header .header-left .toggle {
     width: 24px;
     height: 24px;
-    margin: 12px 10px 12px 16px;
-    background-image: url("../../content/img/toggle.png");
+    margin: 12px 18px 12px 16px;
+    background-image: url("../../content/img/toggle.jpg");
     background-size: contain;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .header .header-left .logo {
+    width: 100%;
     height: 24px;
-    width: 150px;
     background-image: url("../../content/img/cukcuk-logo.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -32,67 +31,64 @@
 }
 
 .header .header-right {
-    width: calc(100% - 226px);
-    height: 48px;
+    height: 100%;
+    width: calc(100% - 218px);
+    border-left: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.header-right .restaurant-selector {
+    height: 44px;
+    width: 200px;
+    display: flex;
     align-items: center;
-    border-bottom: 1px solid #cccc;
+}
+
+.header-right .restaurant-selector .restaurant-name {
+    width: auto;
+    font-size: 15px;
+    margin-left: 16px;
+    margin-right: 10px;
+}
+
+.header-right .restaurant-selector .arrow {
+    height: 16px;
+    width: 16px;
+    background-image: url("../../content/icon/chevron-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+
+.header-right .user {
+    height: 100%;
+    width: auto;
+    justify-content: center;
     display: flex;
 }
 
-.header .header-right .header-title {
-    margin: 0px 10px 0px 16px;
-}
-
-.header .header-right .header-arrow {
-    height: 12px;
-    width: 12px;
-    background-image: url("../../content/icon/arrow-down-sign-to-navigate.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.header .header-right .header-right-content {
-    width: 300px;
-    height: 48px;
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    align-items: center;
-}
-
-.header .header-right .header-right-content .customer-logo {
-    height: 32px;
+.header-right .user .user-avatar {
     width: 32px;
-    position: relative;
-    float: right;
+    height: 32px;
+    margin: 6px 16px 8px 16px;
+    border-radius: 50%;
     background-image: url("../../content/icon/avatar-default.png");
     background-size: contain;
-    border-radius: 50%;
-    background-repeat: no-repeat;
-    margin-top: 8px;
+    background-color: #ccc;
 }
 
-.header .header-right .header-right-content .customer-name {
-    height: 32px;
-    position: relative;
-    float: right;
-    box-sizing: content-box;
-    text-align: center;
-    line-height: 32px;
-    margin-right: 16px;
-    margin-left: 16px;
-    margin-top: 8px;
+.header-right .user .user-fullname {
+    width: auto;
+    line-height: 48px;
+    font-size: 13px;
 }
 
-.header .header-right .header-right-content .customer-dash {
+.header-right .user .user-function {
     height: 16px;
     width: 16px;
-    position: relative;
-    float: right;
-    right: 0px;
-    margin-right: 16px;
-    margin-top: 16px;
-    border-radius: 50%;
+    margin: 16px 16px 16px 16px;
     background-image: url("../../content/icon/option.png");
     background-size: contain;
     background-repeat: no-repeat;

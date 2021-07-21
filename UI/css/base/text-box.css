@@ -1,13 +1,23 @@
-.text-box-default {
+.textbox-default {
     height: 40px;
     border: 1px solid #bbbbbb;
-    border-radius: 4px;
+    width: 250px;
     padding-left: 16px;
     padding-right: 16px;
     outline: none;
+    border-radius: 4px;
     box-sizing: border-box;
 }
 
-.text-box-default:focus {
-    border-color: #019160;
+.textbox-default:hover {
+    cursor: pointer;
+    border-color: #2FBE8E;
+}
+
+.textbox-default:focus {
+    border-color: #01b075;
+}
+
+label {
+    font-size: 13px;
 }

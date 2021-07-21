@@ -1,25 +1,16 @@
-.div-dialog {
-    position: absolute;
-    background-color: #808080;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-    visibility: hidden;
-}
-
-.popup {
+#popup {
     position: absolute;
     width: 800px;
-    height: 630px;
-    top: 40px;
+    height: 600px;
+    top: 24px;
     left: 500px;
+    border: 2px solid #000;
     background-color: #fff;
     border-radius: 4px;
-    visibility: hidden;
-    opacity: 1;
 }
+
+
+/* Phần đầu popup */
 
 .head {
     width: 100%;
@@ -29,23 +20,29 @@
 }
 
 .head .head-text {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    line-height: 50px;
     width: auto;
-    height: 100%;
-    margin-left: 24px;
+    height: 24px;
+    margin: 24px 24px 0 24px;
     font-size: 24px;
 }
 
 .head .head-close {
     right: 0;
-    width: 36px;
-    height: 36px;
+    width: 24px;
+    height: 24px;
     background-image: url("../../content/icon/x.svg");
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+    border-radius: 4px;
 }
+
+.head .head-close:hover {
+    background-color: #e9ebee;
+}
+
+
+/* Phần main của popup */
 
 .main {
     width: 100%;
@@ -55,40 +52,38 @@
 
 .avatar {
     width: 25%;
-    height: 100%
+    height: 100%;
+    cursor: pointer;
 }
 
 .avatar .image {
-    border: 1px solid #cccccccc;
     width: 150px;
     height: 150px;
     background-image: url("../../content/img/default-avatar.jpg");
     background-size: contain;
     border-radius: 50%;
     margin: 0px 25px 0px 25px;
-}
-
-.avatar .ta-center {
-    text-align: center;
-    width: 90%;
-    margin-left: 16px;
+    border: 1px solid #bbbbbb;
 }
 
 .info {
-    height: 474px;
-    overflow-y: scroll;
+    height: 500px;
     width: 75%;
     margin-right: 24px;
+    overflow-y: scroll;
 }
 
 .info .A {
+    position: relative;
     width: 100%;
-    height: 420px;
+    height: 400px;
 }
 
 .info .B {
+    position: relative;
     width: 100%;
-    height: 40%;
+    height: 300px;
+    margin-top: 16px;
 }
 
 .info .line {
@@ -103,23 +98,8 @@
 }
 
 .info .textbox-default {
-    height: 40px;
-    border: 1px solid #bbbbbb;
     width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
-    outline: none;
-    border-radius: 4px;
-    box-sizing: border-box;
     margin-top: 4px;
-}
-
-.info .textbox-arrow {
-    background-image: url("../../content/icon/arrow-down-sign-to-navigate.png");
-    background-repeat: no-repeat;
-    background-size: 12px 12px;
-    padding-right: 12px;
-    background-position: calc(100% - 8px);
 }
 
 .info .row {
@@ -142,60 +122,236 @@
     margin-top: 8px;
 }
 
+.col .select {
+    margin-top: 4px;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #D2D2D2;
+    box-sizing: border-box;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+col .select .X {
+    margin-left: 70px;
+}
+
+.col .select .select-arrow {
+    right: 0;
+    width: 16px;
+    height: 16px;
+    margin: 12px 12px 0px 0px;
+}
+
+.info .textbox-default.ta-r {
+    padding-right: 45px;
+}
+
+.currency {
+    position: absolute;
+    height: 0px;
+    bottom: 182px;
+    right: 35px;
+    font-style: italic;
+    z-index: 1;
+}
+
+.col .dropdown {
+    height: auto;
+    width: 280px;
+}
+
+
+/* phần footer của popup */
+
 .foot {
     width: 100%;
     height: 60px;
-    background-color: #eeeeee;
+    background-color: #E5E5E5;
     margin-top: 24px;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     text-align: center;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
+    position: absolute;
+    bottom: 0px;
 }
 
 .foot .button.save {
+    width: 100px;
     height: 36px;
-    align-items: center;
-    white-space: nowrap;
-    box-sizing: border-box;
-    border-radius: 4px;
-    padding-left: 40px;
-    padding-right: 16px;
+    padding: 0;
     color: #fff;
-    text-align: center;
     background-color: #019160;
-    line-height: 36px;
-    background-image: url("../../content/icon/add.png");
+    background-image: url("../../content/icon/save.png");
     background-size: 16px 16px;
     background-repeat: no-repeat;
     background-position-x: 16px;
     background-position-y: center;
-    margin: 0 24px 0 0;
-    border: 0px;
+    margin: 0 24px 0 16px;
+    cursor: pointer;
 }
 
 .foot .button.save:hover {
     background-color: #2FBE8E;
 }
 
+.foot .button.save:active {
+    background-color: #01B075;
+    outline: none;
+}
+
 .foot .button.cancel {
     height: 36px;
-    box-sizing: border-box;
+    width: 100px;
     border: 0;
-    padding: 0 16px 0 16px;
-    color: #000000;
+    padding: 0;
+    color: #000;
     text-align: center;
-    background-color: #eeeeee;
+    background-color: #E5E5E5;
     line-height: 36px;
-    margin: 0 16px 0 16px;
+    margin: 0 24px 0 24px;
+    cursor: pointer;
 }
 
 .foot .button.cancel:hover {
-    background-color: red;
+    background-color: #bbbbbb;
 }
 
-.cl-red {
-    color: red;
+
+/* Responsive 1366*768 */
+
+@media only screen and (max-width: 1366px) {
+    #popup {
+        position: absolute;
+        width: calc(100% - 48px);
+        height: calc(100% - 23px);
+        top: 24px;
+        left: 24px;
+        box-sizing: border-box;
+    }
+    /* Phần đầu popup */
+    .head {
+        width: 100%;
+        height: 72px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+    .head .head-close {
+        right: 0;
+        width: 36px;
+        height: 36px;
+        background-image: url("../../content/icon/x.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    .head .head-close:hover {
+        background-color: #e9ebee;
+    }
+    /* Phần main của popup */
+    .main {
+        width: 100%;
+        display: flex;
+        height: (100% - 156px);
+    }
+    /* Chọn ảnh */
+    .avatar {
+        width: 20%;
+        height: 100%;
+        cursor: pointer;
+    }
+    .avatar .image {
+        width: 200px;
+        height: 200px;
+        background-image: url("../../content/img/default-avatar.jpg");
+        background-size: contain;
+        border-radius: 50%;
+        margin-left: 24px;
+    }
+    .avatar .ta-center {
+        margin-left: 25px;
+    }
+    .info {
+        height: 100%;
+        width: 80%;
+        margin: 0 24px;
+        display: flex;
+    }
+    .info .A {
+        width: 50%;
+        height: 100%;
+        margin-right: 12px;
+    }
+    .info .B {
+        width: 50%;
+        height: 100%;
+        margin-left: 12px;
+        margin-top: 0px;
+    }
+    .info .line {
+        width: 75px;
+        height: 4px;
+        background-color: #019160;
+        margin-top: 8px;
+    }
+    .info .col {
+        width: calc((100% - 16px)*0.5);
+    }
+    .info .textbox-default {
+        width: 100%;
+        margin-top: 4px;
+    }
+    .info .row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 8px;
+    }
+    .info .row .textbox-default:hover {
+        border-color: #2FBE8E;
+    }
+    .info .row .textbox-default:focus {
+        border-color: #01B075;
+    }
+    .info .row.mt-8 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 8px;
+    }
+    .col .select {
+        margin-top: 4px;
+        display: flex;
+        width: 100%;
+        height: 40px;
+        border-radius: 4px;
+        border: 1px solid #D2D2D2;
+        box-sizing: border-box;
+        justify-content: space-between;
+    }
+    col .select .X {
+        margin-left: 70px;
+    }
+    .col .select .arrow {
+        right: 0;
+        width: 16px;
+        height: 16px;
+        margin: 12px 12px 0px 0px;
+    }
+    .info .textbox-default.ta-r {
+        padding-right: 45px;
+    }
+    .currency {
+        top: 232px;
+    }
+    .col .dropdown {
+        height: auto;
+        width: 202px;
+    }
+    .foot {
+        position: absolute;
+        bottom: 0;
+    }
 }

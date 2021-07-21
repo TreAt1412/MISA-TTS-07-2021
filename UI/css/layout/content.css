@@ -1,429 +1,91 @@
+@import url("../../css/base/button.css");
 .content {
     position: absolute;
-    top: 49px;
-    left: 226px;
-    width: calc(100% - 226px);
-    height: calc(100% - 49px);
-}
-
-.content .content-title {
-    width: 100%;
-    height: 44px;
-    position: relative;
-    display: flex;
-    padding-top: 12px;
-    align-items: center;
-}
-
-.content .content-title .title-content {
-    font-size: 16px;
-    box-sizing: content-box;
-    position: absolute;
-    float: left;
-    width: 200px;
-    margin-left: 16px;
-}
-
-.content .content-title .add-employee-btn {
-    position: absolute;
-    float: right;
-    right: 16px;
-    height: 40px;
+    top: 48px;
+    left: 224px;
+    display: block;
+    width: calc(100% - 225px);
+    height: calc(100vh -48px);
     box-sizing: border-box;
-    padding-right: 16px;
-    background-image: url("../../content/icon/add.png");
-    background-repeat: no-repeat;
-    background-size: 16px;
-    background-position: 16px 12px;
-    border-radius: 4px;
-    border: none;
-    background-color: #019160;
-    cursor: pointer;
-    color: #ffffff;
-    padding-left: 40px;
-    text-align: left
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
 }
 
-.content .content-title .add-employee-btn:hover {
-    background-color: #01B075;
+.content.expand {
+    width: calc(100% - 52px);
+    left: 52px;
+    transition: left 1s;
 }
 
-.content .content-title .add-employee .add-employee-btn .add-employee-logo {
-    height: 16px;
-    width: 16px;
-    float: left;
-    left: 0px;
-    margin-left: 16px;
-    margin-right: 8px;
-    background-image: url("../../content/icon/add.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.content .content-tool {
+.content .content-header {
     position: relative;
+    height: 60px;
+    width: 100%;
+    /* background-color: #ccc; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .content-header .title {
+    padding-top: 20px;
+    font-size: 20px;
+    width: auto;
+    font-weight: bold;
+    margin-left: 24px;
+}
+
+.content-header .button {
     height: 40px;
-    width: 100%;
-    margin-top: 2px;
+    margin-top: 12px;
+    margin-right: 24px;
     display: flex;
-    align-items: center;
-    padding-bottom: 8px;
-}
-
-.content .content-tool .input-search {
-    position: relative;
-    width: 300px;
-    height: 38px;
-    border: 1px solid #cccc;
-    border-radius: 4px;
-    margin-left: 16px;
-    margin-right: 8px;
-    display: flex;
-    align-items: center;
-}
-
-.content .content-tool .content-search {
-    margin-left: 16px;
-    margin-right: 8px;
-    height: 36px;
-    width: 260px;
-    border-radius: 4px;
-    border: 1px solid #cccc;
-    padding-left: 40px;
-    background-image: url("../../content/icon/search.png");
-    background-repeat: no-repeat;
-    background-size: 16px;
-    background-position: 16px 12px;
-    outline: none;
-}
-
-.content .content-tool .content-search:focus {
-    border-color: #019160 !important;
-}
-
-.content .content-tool .content-search:hover {
-    border: 1px solid #019160;
-}
-
-.content .content-tool .department-filter {
-    position: relative;
-    box-sizing: content;
-    height: 38px;
-    border: 1px solid #cccc;
-    border-radius: 4px;
-    margin-right: 16px;
-    display: flex;
-    align-items: center;
-    width: 200px;
     cursor: pointer;
 }
 
-.content .content-tool .department-filter:hover {
-    border-color: #019160 !important;
-}
-
-.content .content-tool .department-filter .department-name {
-    margin-left: 16px;
-}
-
-.content .content-tool .department-filter .department-filter-icon {
-    position: absolute;
-    float: right;
-    right: 12px;
-    height: 12px;
-    width: 12px;
-    background-image: url("../../content/icon/arrow-down-sign-to-navigate.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.content .content-tool .position-filter {
-    position: relative;
-    box-sizing: content;
-    height: 38px;
-    border: 1px solid #cccc;
-    border-radius: 4px;
-    margin-right: 16px;
-    display: flex;
-    align-items: center;
-    width: 200px;
-    cursor: pointer;
-}
-
-.content .content-tool .position-filter:hover {
-    border-color: #019160 !important;
-}
-
-.content .content-tool .position-filter .position-name {
-    margin-left: 16px;
-}
-
-.content .content-tool .position-filter .position-filter-icon {
-    position: absolute;
-    float: right;
-    right: 12px;
-    height: 12px;
-    width: 12px;
-    background-image: url("../../content/icon/arrow-down-sign-to-navigate.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.content .content-tool .refresh {
-    position: absolute;
-    float: right;
-    right: 16px;
-    height: 38px;
-    width: 38px;
-    border-radius: 4px;
-}
-
-.content .content-tool .refresh button {
+.filter {
+    height: 48px;
     width: 100%;
-    height: 100%;
+    display: flex;
+    padding-top: 4px;
+    justify-content: space-between;
+}
+
+.department,
+.position {
+    height: 40px;
+    width: 202px;
+    margin-left: 16px;
+}
+
+.department .dropdown,
+.position .dropdown {
+    width: 200px;
+    height: auto;
+}
+
+.department .select,
+.position .select {
+    width: calc(100% - 2px);
+}
+
+.filter .refresh {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    right: 0;
+    width: 50px;
+    height: 40px;
     background-image: url("../../content/icon/refresh.png");
     background-repeat: no-repeat;
-    background-size: 20px;
-    background-position: 8px 8px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #ffffff;
-}
-
-.content .table-content {
-    position: relative;
-    width: calc(100% - 32px);
-    height: calc(100% - 49px - 44px - 40px - 35px);
-    margin-left: 16px;
-    margin-right: 16px;
-    border-bottom: 5px solid #cccccc;
-    max-height: 100%;
-    overflow-y: scroll;
-}
-
-::-webkit-scrollbar {
-    width: 5px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background: #cccccccc;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-.content .table-content .main-table {
-    border-collapse: collapse;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-.content .table-content .main-table tr {
-    border-bottom: 2px solid #cccccc;
-    height: 40px;
-}
-
-.content .table-content .main-table tr:hover {
-    background-color: #f8f7f7 !important;
-}
-
-.content .table-content .main-table tr th {
-    position: sticky;
-    top: 0px;
-    background-color: #ffffff;
-}
-
-.content .table-content .main-table tr td {
+    background-position: center;
+    box-sizing: border-box;
+    margin-right: 24px;
     cursor: pointer;
 }
 
-.content .table-content .main-table .employee-id {
-    text-align: left;
-    padding-left: 10px;
-}
-
-.content .table-content .main-table .employee-name {
-    text-align: left;
-    padding-left: 10px;
-}
-
-.content .table-content .main-table .employee-gender {
-    text-align: left;
-    padding-left: 10px;
-}
-
-.content .table-content .main-table .employee-dob {
-    text-align: center;
-    padding-left: 10px;
-}
-
-.content .table-content .main-table .employee-phone {
-    text-align: left;
-    padding-left: 10px;
-}
-
-.content .table-content .main-table .employee-email {
-    text-align: left;
-    padding-left: 10px;
-}
-
-.content .table-content .main-table .employee-role {
-    text-align: left;
-    padding-left: 10px;
-}
-
-.content .table-content .main-table .employee-department {
-    text-align: left;
-    padding-left: 10px;
-}
-
-.content .table-content .main-table .employee-wage {
-    text-align: right;
-    padding-left: 10px;
-    padding-right: 8px;
-}
-
-.content .table-content .main-table .employee-status {
-    text-align: left;
-    padding-left: 10px;
-}
-
-.content .table-content .main-table tbody {
-    position: relative;
-    width: 100%;
-    display: table;
-}
-
-.content .table-content .main-table tbody tr {
-    text-align: auto;
-    position: relative;
-    width: 100%;
-}
-
-.content .table-content .main-table tbody tr td {
-    word-wrap: break-word;
-    white-space: nowrap;
-}
-
-.content .table-content .main-table tbody tr:nth-child(even) {
-    background-color: #f8f7f7;
-}
-
-.content .content-footer {
-    position: relative;
-    width: calc(100% - 32px);
-    height: 56px;
-    display: flex;
-    align-items: center;
-    margin-left: 16px;
-}
-
-.content .content-footer .footer-left {
-    width: 33.33%;
-    padding-left: 16px;
-}
-
-.content .content-footer .footer-middle {
-    width: 33.33%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-}
-
-.content .content-footer .footer-right {
-    width: 33.33%;
-    padding-right: 16px;
-    text-align: right;
-}
-
-.content .content-footer .footer-middle .double-left {
-    /* background-image: url("../../content/icon/arrow-double-left.PNG");
-    background-size: contain;
-    background-repeat: no-repeat; */
-    border: none;
-    width: 20px;
-    height: 20px;
-    margin-left: 16px;
-    cursor: pointer;
-    background-color: white;
-}
-
-.content .content-footer .footer-middle .left {
-    background-color: white;
-    border: none;
-    width: 20px;
-    height: 20px;
-    margin-left: 16px;
-    cursor: pointer;
-}
-
-.content .content-footer .footer-middle .right {
-    background-color: white;
-    border: none;
-    width: 20px;
-    height: 20px;
-    margin-left: 8px;
-    cursor: pointer;
-}
-
-.content .content-footer .footer-middle .double-right {
-    background-color: white;
-    border: none;
-    width: 20px;
-    height: 20px;
-    margin-left: 16px;
-    cursor: pointer;
-}
-
-.content .content-footer .footer-middle .page-number:hover {
-    background-color: #fff;
-    border: none;
-}
-
-.content .content-footer .footer-middle .page-number:active {
-    background-color: #019160
-}
-
-.content .content-footer .footer-middle .page-number {
-    border: 1px solid #cccccc;
-}
-
-.content .content-footer .footer-middle .first-page {
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    margin-left: 8px;
-    cursor: pointer;
-}
-
-.content .content-footer .footer-middle .second-page {
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    margin-left: 8px;
-    cursor: pointer;
-}
-
-.content .content-footer .footer-middle .third-page {
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    margin-left: 8px;
-    cursor: pointer;
-}
-
-.content .content-footer .footer-middle .forth-page {
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    margin-left: 8px;
-    cursor: pointer;
+.content #gridEmployee {
+    height: calc(100vh - 217px);
+    margin: 0px 24px 0px 24px;
+    line-height: 40px;
+    overflow: scroll;
+    width: calc(100% - 48px);
 }
