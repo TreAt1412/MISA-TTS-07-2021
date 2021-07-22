@@ -75,6 +75,7 @@ $(document).on("click", function(e) {
         $(".select-arrow").removeClass("rot-180");
     }
 })
+<<<<<<< HEAD
 
 
 /**
@@ -90,3 +91,5 @@ $(".X").click(function() {
     inp.html(text);
     $(this).attr("style", "visibility: hidden;")
 })
+=======
+>>>>>>> 14f8b4b5d9f8b0c61a9e1f85e885ce3b4c875f53
