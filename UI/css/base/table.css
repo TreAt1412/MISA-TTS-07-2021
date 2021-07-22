@@ -16,6 +16,7 @@ tbody tr:nth-child(odd) {
 
 tr {
     border-bottom: 1px solid #ccc;
+    height: 47px;
 }
 
 tr:hover {

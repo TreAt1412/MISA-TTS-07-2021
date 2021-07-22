@@ -1,6 +1,6 @@
 /**
  * Sự kiện hiện/ẩn dropdown
- * Ngọc 16/7/2021
+ * Dvanh 21/7/2021
  */
 $(".select-arrow").click(function() {
     let me = $(this),
@@ -43,7 +43,7 @@ $(".inp").click(function() {
 
 /**
  * Bấm chọn các nội dung khác trong dropdown
- * Ngọc 16/7/2021
+ * Dvanh 21/7/2021
  */
 $(".dropdown").on("click", ".dropdown-item", function() {
     let me = $(this),
@@ -56,17 +56,17 @@ $(".dropdown").on("click", ".dropdown-item", function() {
     me.parent().parent().find(".inp").text(val);
     me.parent().parent().find(".X").attr("style", "visibility: visible;");
     //bấm X thì các .dropdown-item được bỏ chọn và khôi phục text như lúc đầu
-    $(".X").click(function() {
-        $(this).attr("style", "visibility: hidden;")
-        $(this).parent().find(".inp").text(text.text());
-        $(this).parent().find(me).removeClass("bg-select");
-    })
+    // $(".X").click(function() {
+    //     $(this).attr("style", "visibility: hidden;")
+    //     $(this).parent().find(".inp").text(text.text());
+    //     $(this).parent().find(me).removeClass("bg-select");
+    // })
 })
 
 
 /**
  * Sự kiện bấm bất kì thứ gì ngoài cái mũi tên thì dropdown ẩn đi 
- * Ngọc 16/7/2021
+ * Dvanh 21/7/2021
  */
 $(document).on("click", function(e) {
     if (!$(".select-arrow").is(e.target) && !$(".inp").is(e.target)) {
@@ -74,4 +74,19 @@ $(document).on("click", function(e) {
         $(".select-arrow").addClass("rot-0");
         $(".select-arrow").removeClass("rot-180");
     }
+})
+
+
+/**
+ * Trở về text mặc định của filter chính
+ * Dvanh 22/7/2021
+ */
+
+$(".X").click(function() {
+    let me = $(this);
+    inp = me.parent().find(".inp");
+    const text = inp.attr("Val");
+    console.log(text);
+    inp.html(text);
+    $(this).attr("style", "visibility: hidden;")
 })

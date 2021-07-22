@@ -1,6 +1,6 @@
 .page-navigator {
-    width: calc(100% - 48px);
-    margin: 0px 24px 0px 24px;
+    width: calc(100% - 24px);
+    margin: 0px 12px 0px 12px;
     height: 56px;
     display: flex;
     justify-content: space-between;

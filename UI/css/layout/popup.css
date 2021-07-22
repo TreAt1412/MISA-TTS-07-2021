@@ -2,11 +2,12 @@
     position: absolute;
     width: 800px;
     height: 600px;
-    top: 24px;
-    left: 500px;
+    top: 50%;
+    left: 50%;
     border: 2px solid #000;
     background-color: #fff;
     border-radius: 4px;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -180,15 +181,17 @@ col .select .X {
 }
 
 .foot .button.save {
-    width: 100px;
+    align-items: center;
+    box-sizing: border-box;
     height: 36px;
-    padding: 0;
+    padding-left: 36px;
+    padding-right: 16px;
     color: #fff;
     background-color: #019160;
     background-image: url("../../content/icon/save.png");
     background-size: 16px 16px;
     background-repeat: no-repeat;
-    background-position-x: 16px;
+    background-position-x: 10px;
     background-position-y: center;
     margin: 0 24px 0 16px;
     cursor: pointer;

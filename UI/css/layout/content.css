@@ -31,13 +31,13 @@
     font-size: 20px;
     width: auto;
     font-weight: bold;
-    margin-left: 24px;
+    margin-left: 12px;
 }
 
 .content-header .button {
     height: 40px;
     margin-top: 12px;
-    margin-right: 24px;
+    margin-right: 12px;
     display: flex;
     cursor: pointer;
 }
@@ -78,14 +78,14 @@
     background-repeat: no-repeat;
     background-position: center;
     box-sizing: border-box;
-    margin-right: 24px;
+    margin-right: 12px;
     cursor: pointer;
 }
 
 .content #gridEmployee {
     height: calc(100vh - 217px);
-    margin: 0px 24px 0px 24px;
+    margin: 0px 12px 0px 12px;
     line-height: 40px;
     overflow: scroll;
-    width: calc(100% - 48px);
+    width: calc(100% - 24px);
 }
