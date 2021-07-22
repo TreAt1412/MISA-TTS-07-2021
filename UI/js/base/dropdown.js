@@ -1,6 +1,6 @@
 /**
  * Sự kiện hiện/ẩn dropdown
- * Ngọc 16/7/2021
+ * Dvanh 21/7/2021
  */
 $(".select-arrow").click(function() {
     let me = $(this),
@@ -43,7 +43,7 @@ $(".inp").click(function() {
 
 /**
  * Bấm chọn các nội dung khác trong dropdown
- * Ngọc 16/7/2021
+ * Dvanh 21/7/2021
  */
 $(".dropdown").on("click", ".dropdown-item", function() {
     let me = $(this),
@@ -66,7 +66,7 @@ $(".dropdown").on("click", ".dropdown-item", function() {
 
 /**
  * Sự kiện bấm bất kì thứ gì ngoài cái mũi tên thì dropdown ẩn đi 
- * Ngọc 16/7/2021
+ * Dvanh 21/7/2021
  */
 $(document).on("click", function(e) {
     if (!$(".select-arrow").is(e.target) && !$(".inp").is(e.target)) {
