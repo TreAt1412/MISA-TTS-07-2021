@@ -23,6 +23,7 @@ $(".content-header #btnAdd").click(function() {
     }).fail(res => {
         alert("Không lấy được mã nhân viên");
         $("#popup").hide();
+        $(".wrapper").removeClass("fade");
     })
 
     // //Load dữ liệu cho vị trí
@@ -35,6 +36,8 @@ $(".content-header #btnAdd").click(function() {
     resetPopup();
 
     $('#btnSave').click(function() {
+        if (isRequiredLack(".info") == 0)
+            return;
         const employeeCode = $('#txtEmployeeCode').val();
         const fullName = $('#txtFullName').val();
         const dateOfBirth = $('#txtDateOfBirth').val();
@@ -43,6 +46,10 @@ $(".content-header #btnAdd").click(function() {
         const identityDate = $('#txtIdentityDate').val();
         const identityPlace = $('#txtIdentityPlace').val();
         const email = $('#txtEmail').val();
+        if (emailValidate('#txtEmail', email) == 0) {
+
+            return;
+        }
         const phoneNumber = $('#txtPhoneNumber').val();
         const positionId = $('#txtPositionName').attr("Value");
         const departmentId = $('#txtDepartmentName').attr("Value");
@@ -84,6 +91,7 @@ $(".content-header #btnAdd").click(function() {
 
         }).fail(function(res) {
             console.log(res);
+            alert("thêm mới thất bại")
         });
     })
 });
@@ -93,8 +101,9 @@ $(".content-header #btnAdd").click(function() {
  * Dvanh 21/7/2021
  */
 function resetPopup() {
-
+    $('input').css("border", "1px solid #bbbbbb");
     $('input').val("");
+    $('input').removeClass("");
 }
 /**
  * Hàm lấy dữ liệu vị trí cho dropdown
@@ -109,6 +118,7 @@ function getPosition() {
             const positionName = position['PositionName'];
             const positionId = position['PositionId'];
             let dropdown = $(".dropdown.dd-Position");
+
             let item = `<div class="dropdown-item">
             <div class="dropdown-icon"></div>
             <div class="dropdown-text" Value = "${positionId}">${positionName}</div>
@@ -172,6 +182,7 @@ $('#myFile').click(function(e) {
     $('#myFile').change(function(e) {
         var img = URL.createObjectURL(e.target.files[0]);
         $('.image').css("background-image", `url(${img})`);
+        $('.image').css("background-repeat", `none`);
     })
 })
 
@@ -332,3 +343,43 @@ $("tbody").on("dblclick", "tr", function() {
         });
     })
 })
+
+/**
+ *Check định dạng email 
+ *Dvanh 21/7/2021
+ * @param(txt: tên input, email:string email)
+ */
+
+function emailValidate(txt, email) {
+    if (CommonFn.isEmailAddress(email) == true) {
+        return 1;
+    } else {
+        $(txt).focus();
+        $(txt).css("border", "1px solid #red");
+        $(txt).attr("title", "Không đúng định dạng email")
+        return 0;
+    }
+}
+
+/**
+ * function check rỗng
+ * Dvanh 21/7/2021
+ * @param(div: tên div cần check)
+ */
+
+function isRequiredLack(div) {
+    const inputs = $(div + " input[required]");
+
+    for (i = 0; i < inputs.length; i++) {
+        input = $("#" + inputs[i].id);
+        console.log(input.val());
+        if (input.val() == "") {
+            $('input').css("border", "1px solid #bbbbbb");
+            input.css("border", "1px solid #red !important");
+            input.focus();
+            input.attr("title", "Trường này cần nhập!");
+            return 0;
+        }
+    }
+    return 1;
+}

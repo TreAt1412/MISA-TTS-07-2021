@@ -4,10 +4,34 @@
  */
 var CommonFn = CommonFn || {};
 
+
 /**
- * Hàm format số tiền
- * Dvanh 21/7/2021
+ * hàm check format email 
+ *Dvanh 21/7/2021 
  */
+
+
+CommonFn.isEmailAddress = e => {
+    var pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    console.log(String(e).search(pattern) != -1);
+    return String(e).search(pattern) != -1;
+
+}
+
+/**
+ *hàm check format số điện thoại 
+ *Dvanh 21/7/2021
+ */
+CommonFn.isPhone = p => {
+        pattern = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
+        console.log(String(p).search(pattern) != -1);
+        return String(p).search(pattern) != -1;
+
+    }
+    /**
+     * Hàm format số tiền
+     * Dvanh 21/7/2021
+     */
 CommonFn.formatMoney = money => {
     if (money && !isNaN(money)) {
         return money.toString().replace(/(\d)(?=(\d{3})+(?:\.\d+)?$)/g, "$1.");

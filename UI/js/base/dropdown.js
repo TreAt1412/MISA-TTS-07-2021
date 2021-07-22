@@ -75,7 +75,6 @@ $(document).on("click", function(e) {
         $(".select-arrow").removeClass("rot-180");
     }
 })
-<<<<<<< HEAD
 
 
 /**
@@ -83,13 +82,27 @@ $(document).on("click", function(e) {
  * Dvanh 22/7/2021
  */
 
-$(".X").click(function() {
+$(".filter-main .X").click(function() {
     let me = $(this);
     inp = me.parent().find(".inp");
     const text = inp.attr("Val");
     console.log(text);
     inp.html(text);
     $(this).attr("style", "visibility: hidden;")
+    me.parent('.select').parent(".filter-main").find('.dropdown-item').removeClass("bg-select");
 })
-=======
->>>>>>> 14f8b4b5d9f8b0c61a9e1f85e885ce3b4c875f53
+
+/**
+ *Trở về mặc định của dropdown form nhập 
+ * Dvanh 22/7/2021
+ */
+
+$(".info .X").click(function() {
+    let me = $(this);
+    inp = me.parent().find(".inp");
+    const text = inp.attr("dval");
+    console.log(text);
+    inp.html(text);
+    $(this).attr("style", "visibility: hidden;")
+    me.parent(".select").parent('.input-dropdown').find('.dropdown-item').removeClass("bg-select");
+})

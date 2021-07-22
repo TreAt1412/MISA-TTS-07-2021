@@ -15,11 +15,11 @@
 }
 
 .field-input-icon:hover {
-    border-Color: #019160
+    border-Color: #019160;
 }
 
 .field-input-icon:focus {
-    border-Color: #019160
+    border-Color: #019160;
 }
 
 input::placeholder {
