@@ -29,7 +29,15 @@ Enumeration.Gender = {
  * Dvanh 21/7/2021
  */
 Enumeration.Position = {
-    Fresher: 0, // fresher
-    Junior: 1, // Junior
-    Senior: 2, //Senior
+        Fresher: 0, // fresher
+        Junior: 1, // Junior 
+        Senior: 2, //Senior
+    }
+    /**
+     * Tình trạng công việc 
+     * Dvanh 22/7/2021
+     */
+Enumeration.Workstatus = {
+    Working: 1,
+    Ban: 2, //
 }

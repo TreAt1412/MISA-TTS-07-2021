@@ -125,6 +125,11 @@ function getPosition() {
             </div>`
             dropdown.append(item);
         })
+        let dropdown = $("#txtPositionName");
+        console.log(res[0].PositionName)
+        dropdown.text(res[0].PositionName);
+        dropdown.attr("Val", res[0].PositionId);
+
 
     })
 };
@@ -148,6 +153,10 @@ function getDepartment() {
             </div>`
             dropdown.append(item);
         })
+        let dropdown = $("#txtDepartmentName");
+        console.log(res[0].DepartmentName)
+        dropdown.text(res[0].DepartmentName);
+        dropdown.attr("Val", res[0].DepartmentId);
 
     })
 };
@@ -208,9 +217,12 @@ function loadData() {
                     PositionName = employee.PositionName,
                     DepartmentName = employee.DepartmentName,
                     Salary = CommonFn.formatMoney(employee.Salary),
-                    WorkStatus = employee.WorkStatus,
+                    Workstatus = employee.WorkStatus,
                     DateOfBirth = CommonFn.formatDate(employee.DateOfBirth);
-
+                WorkStatus = getWorkingStatus(Workstatus);
+                if (GenderName == null) {
+                    GenderName = ""
+                }
                 let trHTML = `<tr Value = ${employee.EmployeeId}>
                         <td>${EmployeeCode}</td>
                         <td>${FullName}</td>
@@ -269,6 +281,7 @@ $("tbody").on("dblclick", "tr", function() {
 
     // //Load dữ liệu cho phòng ban
     // getDepartment();
+    $(".wrapper").addClass("fade");
     $("#popup").show();
     for (let i = 0; i < employees.length; i++) {
         let employee = employees[i];
@@ -277,6 +290,23 @@ $("tbody").on("dblclick", "tr", function() {
             $('#txtFullName').val(employee.FullName);
             $('#txtDateOfBirth').val(employee.DateOfBirth);
             $('#txtGender').attr("Value", `${employee.Gender}`);
+            if (employee.Gender == 0) {
+                $('#txtGender').text("Nữ");
+                me = $('#txtGender').parent('.select').parent(".input-dropdown");
+                me.find('.dropdown').find('.dropdown-item').removeClass("bg-select");
+                me.find('.dropdown').find('.dropdown-item').eq(1).addClass("bg-select");
+            } else if (employee.Gender == 2) {
+
+                $('#txtGender').text("Không xác định");
+                me = $('#txtGender').parent('.select').parent(".input-dropdown");
+                me.find('.dropdown').find('.dropdown-item').removeClass("bg-select");
+                me.find('.dropdown').find('.dropdown-item').eq(2).addClass("bg-select");
+            } else {
+                $('#txtGender').text("Nam");
+                me = $('#txtGender').parent('.select').parent(".input-dropdown");
+                me.find('.dropdown').find('.dropdown-item').removeClass("bg-select");
+                me.find('.dropdown').find('.dropdown-item').eq(0).addClass("bg-select");
+            }
             $('#txtIdentityNumber').val(employee.IdentityNumber);
             $('#txtIdentityDate').val(employee.IdentityDate);
             $('#txtIdentityPlace').val(employee.IdentityPlace);
@@ -334,12 +364,12 @@ $("tbody").on("dblclick", "tr", function() {
             dataType: "json",
         }).done(res => {
             alert("Sửa thành công");
-            loadData();
+
             $("#popup").hide();
             $(".wrapper").removeClass("fade");
-
+            loadData();
         }).fail(function(res) {
-            console.log(res);
+            alert("Sửa thất bại");
         });
     })
 })
@@ -382,4 +412,35 @@ function isRequiredLack(div) {
         }
     }
     return 1;
+}
+
+
+/**
+ * lấy tình trạng công việc
+ * @param :workingstatus: int
+ * Dvanh 22/7/2021 
+ * 
+ */
+function getWorkingStatus(WorkStatus) {
+    switch (WorkStatus) {
+        case 0:
+            WorkStatus = "Đang làm việc"
+            break
+
+        case 1:
+            WorkStatus = "Đã nghỉ việc"
+            break
+        case 2:
+            WorkStatus = "Nghỉ có phép"
+            break
+        case 3:
+            WorkStatus = "Nghỉ không phép"
+            break
+        default:
+            WorkStatus = "Chưa rõ"
+            break
+    }
+
+
+    return WorkStatus;
 }
