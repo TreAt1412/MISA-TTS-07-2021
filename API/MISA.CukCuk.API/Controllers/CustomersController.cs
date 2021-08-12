@@ -336,7 +336,7 @@ namespace MISA.CukCuk.API.Controllers
         /// </summary>
         /// <param name="customerId"></param>
         /// <returns> số cột bị thay đổi</returns>
-        /// createdby dvanh
+        /// createdby dvanh 12/08/2021
         [HttpDelete("{customerId}")]
         public IActionResult DeleteCustomer(Guid customerId)
         {
