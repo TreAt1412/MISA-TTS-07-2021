@@ -1,0 +1,19 @@
+.second-button {
+    height: 40px;
+    display: inline-block;
+    border-radius: 4px;
+    color: #fff;
+    padding: 0 16px;
+    text-align: right;
+    background-color: #019160;
+    line-height: 40px;
+    outline: 0;
+}
+
+.second-button:hover {
+    background-color: #E9EBEE;
+}
+
+.second-button:active {
+    background-color: #01B075;
+}

@@ -7,6 +7,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MISA.Core.Interfaces.Repository;
+using MISA.Core.Interfaces.Services;
+using MISA.Core.Services;
+using MISA.Infrastructure.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,12 +30,34 @@ namespace MISA.CukCuk.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            var connectionString = Configuration.GetConnectionString("CukCukDatabase");
+            services.AddCors();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MISA.CukCuk.API", Version = "v1" });
             });
+            services.AddControllers().AddJsonOptions(jsonOptions =>
+            {
+                jsonOptions.JsonSerializerOptions.PropertyNamingPolicy = null;
+            });
+            // Service DI
+            services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<IPositionService, PositionService>();
+            services.AddScoped<IDepartmentService, DepartmentService>();
+            services.AddScoped<IEmployeeService, EmployeeService>();
+
+            // Repository DI
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+            services.AddScoped<IPositionRepository, PositionRepository>();
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+
+            //Base DI
+            //services.AddScoped<IBaseService, BaseService>();
+            //services.AddScoped<IBaseRepository, BaseRepository>();
+            services.AddScoped(typeof(IBaseService<>), typeof(BaseService<>));
+            services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,7 +68,6 @@ namespace MISA.CukCuk.API
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MISA.CukCuk.API v1"));
-
             }
 
             app.UseHttpsRedirection();

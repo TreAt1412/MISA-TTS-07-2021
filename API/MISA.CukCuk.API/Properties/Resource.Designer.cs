@@ -61,29 +61,29 @@ namespace MISA.CukCuk.API.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to không được để trống.
+        ///   Looks up a localized string similar to Mã nhập vào đã bị trùng.
         /// </summary>
-        public static string Blank_colum {
+        public static string Duplicate_Code {
             get {
-                return ResourceManager.GetString("Blank_colum", resourceCulture);
+                return ResourceManager.GetString("Duplicate_Code", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Có lỗi xảy ra vui lòng liên hệ MISA.
+        ///   Looks up a localized string similar to Email không đúng định dạng.
         /// </summary>
-        public static string Exception_Message {
+        public static string Error_Email {
             get {
-                return ResourceManager.GetString("Exception_Message", resourceCulture);
+                return ResourceManager.GetString("Error_Email", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to không đúng định dạng.
+        ///   Looks up a localized string similar to Có lỗi xảy ra! Vui lòng liên hệ MISA.
         /// </summary>
-        public static string Fail_format {
+        public static string Error_Message_UserVN {
             get {
-                return ResourceManager.GetString("Fail_format", resourceCulture);
+                return ResourceManager.GetString("Error_Message_UserVN", resourceCulture);
             }
         }
     }

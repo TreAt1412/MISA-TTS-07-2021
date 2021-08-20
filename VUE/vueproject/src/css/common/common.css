@@ -1,0 +1,98 @@
+.d-flex {
+    display: flex !important;
+}
+
+.d-none {
+    display: none;
+}
+
+.v-visible {
+    visibility: visible;
+}
+
+.v-hidden {
+    visibility: hidden;
+}
+
+.bg-select {
+    background-color: #019160 !important;
+    color: #fff;
+}
+
+.selected-row {
+    background: rgb(223, 218, 218);
+}
+
+.z-index-11 {
+    z-index: 11;
+}
+
+.z-index-1 {
+    z-index: 1;
+}
+
+.z-index-2 {
+    z-index: 2;
+}
+
+.z-index-12 {
+    z-index: 12;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.mr-30 {
+    margin-right: 30px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.lh-56 {
+    line-height: 56px;
+}
+
+.ta-center {
+    text-align: center;
+}
+
+.ta-r {
+    text-align: right;
+}
+
+.ta-l {
+    text-align: left;
+}
+
+.cl-red {
+    color: red;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.p-absolute {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #bbbbbb;
+    opacity: 0.75;
+}
+
+.notValid {
+    border-color: #FF4747 !important;
+}

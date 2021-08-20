@@ -1,0 +1,33 @@
+.input-zone {
+    position: relative;
+}
+
+.tooltip {
+    height: auto;
+    position: absolute;
+    width: calc(100% - 84px);
+    left: 42px;
+    right: 42px;
+    bottom: 45px;
+    z-index: 10;
+    background-color: #ff4747;
+    text-align: center;
+    line-height: 17px;
+    border-radius: 4px;
+    padding: 4px 0;
+}
+
+.tooltip .tooltip-text {
+    max-width: 200px;
+}
+
+.tooltip .tooltip-icon {
+    position: absolute;
+    background-image: url("../../assets/icon/tooltip-arrow.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+    width: 16px;
+    height: 16px;
+    left: calc((100% - 16px) / 2);
+}

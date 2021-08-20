@@ -117,13 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Blank_colum" xml:space="preserve">
-    <value>không được để trống</value>
+  <data name="Duplicate_Code" xml:space="preserve">
+    <value>Mã nhập vào đã bị trùng</value>
   </data>
-  <data name="Exception_Message" xml:space="preserve">
-    <value>Có lỗi xảy ra vui lòng liên hệ MISA</value>
+  <data name="Error_Email" xml:space="preserve">
+    <value>Email không đúng định dạng</value>
   </data>
-  <data name="Fail_format" xml:space="preserve">
-    <value>không đúng định dạng</value>
+  <data name="Error_Message_UserVN" xml:space="preserve">
+    <value>Có lỗi xảy ra! Vui lòng liên hệ MISA</value>
   </data>
 </root>

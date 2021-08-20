@@ -1,0 +1,33 @@
+.button {
+    height: 40px;
+    display: inline-block;
+    border-radius: 4px;
+    color: #fff;
+    padding-right: 16px;
+    padding-left: 0px;
+    text-align: center;
+    background-color: #019160;
+    line-height: 40px;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+.button:hover {
+    background-color: #2FBE8E;
+}
+
+button:active {
+    background-color: #01B075;
+}
+
+.button .button-icon {
+    margin: 12px 8px 8px 16px;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.button .button-text {
+    white-space: nowrap;
+}

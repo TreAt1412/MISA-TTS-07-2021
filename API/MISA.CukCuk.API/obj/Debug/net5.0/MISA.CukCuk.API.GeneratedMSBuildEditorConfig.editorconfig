@@ -6,3 +6,5 @@ build_property.ProjectTypeGuids =
 build_property.PublishSingleFile = 
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
+build_property.RootNamespace = MISA.CukCuk.API
+build_property.ProjectDir = C:\Users\Admin\Desktop\thực tập MISA\MISA-TTS-07-2021\API\MISA.CukCuk.API\
